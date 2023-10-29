@@ -1,0 +1,11 @@
+'''ENTER PESDO CODE HERE WHEN DONE'''
+#Impot Path and CSV 
+from pathlib import Path
+import csv
+
+#Set file path and open CSV
+csvpath = Path('Resources/budget_data.csv')
+
+with open(csvpath) as csvfile :
+    csvreader = csv.reader(csvfile, delimiter=",")
+    
