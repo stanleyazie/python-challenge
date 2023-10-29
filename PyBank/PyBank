@@ -1,4 +1,5 @@
 '''ENTER PESDO CODE HERE WHEN DONE'''
+
 #Impot Path and CSV 
 from pathlib import Path
 import csv
@@ -6,6 +7,28 @@ import csv
 #Set file path and open CSV
 csvpath = Path('Resources/budget_data.csv')
 
-with open(csvpath) as csvfile :
+#Set vairiables 
+total_months = 0
+total_profit = 0
+average = 0
+high_month = ''
+high_month_profit = 0
+low_month = ''
+low_month_loss = 0
+
+with open(csvpath, newline='') as csvfile :
     csvreader = csv.reader(csvfile, delimiter=",")
+
+    #skip header row
+    csvheader = next(csvreader)
     
+    #iterate through the data to answer questions
+    for row in csvreader :
+
+        #count the total months
+        total_months += 1
+
+
+
+#Print Findings
+print(f'Total Months:{total_months}')
