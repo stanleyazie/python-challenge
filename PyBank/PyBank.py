@@ -19,6 +19,7 @@ best_month_profit = 0
 worst_month = ''
 worst_month_profit = 0
 
+#open an read csv
 with open(csvpath, newline='') as csvfile :
     csvreader = csv.reader(csvfile, delimiter=",")
 
@@ -52,7 +53,7 @@ with open(csvpath, newline='') as csvfile :
 #set path for export file
 analysis = Path('analysis.txt')
 
-#open txt file and write data to it
+#open txt file and write findings to it
 with open(analysis, 'w') as txtfile :
     txtfile.write('Financial Analysis')
     txtfile.write('\n----------------------------')
